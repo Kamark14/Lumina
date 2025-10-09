@@ -61,6 +61,6 @@ Este projeto é apenas para fins de portfólio e estudo.
 Sinta-se livre para usar, modificar e compartilhar!
 
 👤 Autor
-Desenvolvido por Seu Nome.
+Desenvolvido por KaMark14.
 
 Lumina – Ilumine seu espaço com aromas encantadores!
