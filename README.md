@@ -68,8 +68,8 @@ Lumina/
 
 ## 📝 Observações
 
-- **· Sem backend: **
-  · Todos os dados (usuários, pedidos, carrinho) são simulados e armazenados no navegador via localStorage.
+- • Sem backend:
+   - Todos os dados (usuários, pedidos, carrinho) são simulados e armazenados no navegador via localStorage.
 - · Sem integração real de pagamento ou envio de e-mails.
 · Ideal para fins de estudo, demonstração ou portfólio.
 
