@@ -40,3 +40,54 @@ Bem-vindo ao **Lumina**, uma loja virtual de velas aromáticas artesanais, desen
 - LocalStorage (persistência local de dados)
 
 ## 📦 Estrutura de Pastas
+
+
+```
+
+Lumina/
+├──assets/
+│├── css/
+││   └── styles.css
+│└── js/
+│└── script.js
+├──index.html
+
+```
+
+## 🚀 Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/lumina.git
+```
+
+1. Abra o projeto no VS Code ou outro editor.
+2. Execute o arquivo index.html em seu navegador.
+3. Pronto! Explore todas as funcionalidades.
+
+📝 Observações
+
+· Sem backend:
+  · Todos os dados (usuários, pedidos, carrinho) são simulados e armazenados no navegador via localStorage.
+  · Sem integração real de pagamento ou envio de e-mails.
+· Ideal para fins de estudo, demonstração ou portfólio.
+
+📷 Screenshots
+
+(Adicione aqui imagens do projeto rodando - opcional)
+
+📄 Licença
+
+Este projeto é apenas para fins de portfólio e estudo.
+Sinta-se livre para usar,modificar e compartilhar!
+
+👤 Autor
+
+Desenvolvido por KaMark14.
+
+---
+
+Lumina – Ilumine seu espaço com aromas encantadores!
+
+```
+
