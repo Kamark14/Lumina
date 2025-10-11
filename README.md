@@ -72,9 +72,9 @@ Lumina/
   · Sem integração real de pagamento ou envio de e-mails.
 · Ideal para fins de estudo, demonstração ou portfólio.
 
-📷 Screenshots
+📷 View
 
-(Adicione aqui imagens do projeto rodando - opcional)
+https://lumina-rouge.vercel.app/
 
 📄 Licença
 
@@ -88,6 +88,4 @@ Desenvolvido por KaMark14.
 ---
 
 Lumina – Ilumine seu espaço com aromas encantadores!
-
-```
 
