@@ -59,13 +59,14 @@ Lumina/
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/lumina.git
-```
+
+
 
 1. Abra o projeto no VS Code ou outro editor.
 2. Execute o arquivo index.html em seu navegador.
 3. Pronto! Explore todas as funcionalidades.
 
-📝 Observações
+## 📝 Observações
 
 · Sem backend:
   · Todos os dados (usuários, pedidos, carrinho) são simulados e armazenados no navegador via localStorage.
