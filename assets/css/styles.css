@@ -201,6 +201,138 @@ nav ul li a:hover {
     transition: var(--transition);
 }
 
+/* --- Novas seções: Velas decorativas, Kits e Acessórios --- */
+
+.decorative-candles-grid,
+.gift-sets-grid,
+.accessories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Small cards agora usam a mesma estrutura visual dos product-card principais */
+.product-card.small-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.product-card.small-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card.small-card .product-img {
+    height: 200px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-card.small-card .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition);
+}
+
+.product-card.small-card:hover .product-img img {
+    transform: scale(1.1);
+}
+
+.product-card.small-card .product-info {
+    padding: 20px;
+}
+
+.product-card.small-card .product-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.product-card.small-card .desc {
+    color: #666;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.product-card.small-card .product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product-card.small-card .price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.product-card.small-card .add-to-cart {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.product-card.small-card .add-to-cart:hover {
+    background-color: var(--primary-color);
+}
+
+.product-card.small-card .add-to-cart i {
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .products-grid,
+    .decorative-candles-grid,
+    .gift-sets-grid,
+    .accessories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-grid,
+    .decorative-candles-grid,
+    .gift-sets-grid,
+    .accessories-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .product-card,
+    .product-card.small-card {
+        max-width: 100%;
+    }
+    .product-card .product-img,
+    .product-card.small-card .product-img {
+        height: 200px;
+        width: 100%;
+    }
+}
+
 .product-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -255,7 +387,7 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
-.add-to-cart {
+.product-card:not(.small-card) .add-to-cart {
     background-color: var(--accent-color);
     color: white;
     border: none;
@@ -269,7 +401,7 @@ nav ul li a:hover {
     transition: var(--transition);
 }
 
-.add-to-cart:hover {
+.product-card:not(.small-card) .add-to-cart:hover {
     background-color: var(--primary-color);
 }
 
@@ -624,7 +756,7 @@ footer {
 
 .footer-column p {
     font-size: 0.95rem;
-    color: #666;
+    color: #ffffff;
     margin-bottom: 8px;
 }
 
@@ -1032,4 +1164,100 @@ nav ul li.user-icon {
 
 .user-logged-in {
   color: var(--primary-color);
+}
+
+/* Modal de Detalhes do Produto */
+.product-detail-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 9999;
+  display: none;
+}
+.product-detail-modal.active {
+  display: block;
+}
+.product-detail-modal .modal-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.product-detail-modal .modal-content {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  max-width: 400px;
+  width: 90vw;
+  z-index: 2;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product-detail-modal .close-product-modal {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.product-detail-modal .modal-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.product-detail-modal .modal-img img {
+  max-width: 220px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.product-detail-modal .modal-info h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.product-detail-modal .modal-info p {
+  color: #555;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.product-detail-modal .modal-price {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  display: block;
+}
+.product-detail-modal .add-to-cart-modal {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.product-detail-modal .add-to-cart-modal:hover {
+  background: var(--accent-color);
+}
+@media (max-width: 500px) {
+  .product-detail-modal .modal-content {
+    max-width: 95vw;
+    padding: 18px 8px 18px 8px;
+  }
+  .product-detail-modal .modal-img img {
+    max-width: 140px;
+  }
 }
